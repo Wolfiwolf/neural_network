@@ -28,7 +28,7 @@ int main()
         }
 
         net.feed_data({a,b,c});
-        net.back_prop({0});
+        net.back_prop({-1});
 
     }
 
@@ -47,7 +47,7 @@ int main()
 
     net.feed_data({(float)a, (float)b, (float)sum});
     net.get_results(results);
-    std::cout << (results[0] > 0.5f ? "CORRECT":"INCORRECT") << "\n";
+    std::cout << (results[0] > 0.0f ? "CORRECT":"INCORRECT") << "\n";
 
 
     return 0;
